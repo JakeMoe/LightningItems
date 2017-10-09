@@ -1,0 +1,6 @@
+name: LightningItems
+version: 0.1
+author: Jake (John) Moe (JakesAddress@gmail.com)
+main: me.JohnMoe.LightningItems.Main
+website: https://github.com/JakeMoe/LightningItems
+database: false
