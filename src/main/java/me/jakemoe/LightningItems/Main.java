@@ -6,8 +6,10 @@ import org.bukkit.World;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.potion.PotionType;
 
 import java.util.Random;
 
@@ -43,7 +45,7 @@ public class Main extends JavaPlugin {
     PotionMeta potionMeta = (PotionMeta) itemStack.getItemMeta();
     PotionEffectType potionEffectType;
     Random random = new Random();
-    switch (random.nextInt(6)) {
+    switch (random.nextInt(10)) {
       case 0:
         potionEffectType = PotionEffectType.ABSORPTION;
         break;
@@ -57,17 +59,29 @@ public class Main extends JavaPlugin {
         potionEffectType = PotionEffectType.DAMAGE_RESISTANCE;
         break;
       case 4:
-        potionEffectType = PotionEffectType.HARM;
+        potionEffectType = PotionEffectType.FAST_DIGGING;
         break;
       case 5:
+        potionEffectType = PotionEffectType.HARM;
+        break;
+      case 6:
         potionEffectType = PotionEffectType.HEAL;
+        break;
+      case 7:
+        potionEffectType = PotionEffectType.JUMP;
+        break;
+      case 8:
+        potionEffectType = PotionEffectType.SLOW;
+        break;
+      case 9:
+        potionEffectType = PotionEffectType.SPEED;
         break;
       default:
         potionEffectType = PotionEffectType.GLOWING;
         break;
     }
 
-    PotionEffect potionEffect = new PotionEffect(potionEffectType, 5, 1, true, true);
+    PotionEffect potionEffect = new PotionEffect(potionEffectType, 5 * 20, 0, true, true);
     potionMeta.addCustomEffect(potionEffect, true);
     itemStack.setItemMeta(potionMeta);
 

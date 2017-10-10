@@ -1,12 +1,12 @@
 name: LightningItems
-version: 0.1
+version: 0.2
 author: Jake (John) Moe (JakesAddress@gmail.com)
-main: me.JohnMoe.LightningItems.Main
+main: me.jakemoe.LightningItems.Main
 website: https://github.com/JakeMoe/LightningItems
 database: false
 
 commands:
-  lightningitems:
+  lightningitem:
     aliases: li
     description: drops an item
     usage: <command>

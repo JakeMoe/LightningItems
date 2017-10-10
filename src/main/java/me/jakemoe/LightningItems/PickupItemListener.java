@@ -14,7 +14,7 @@ public class PickupItemListener implements Listener {
   @EventHandler
   public void PlayerPickupItem(EntityPickupItemEvent e) {
     ItemStack itemStack = new ItemStack(Material.POTION, 1);
-    if ((e.getEntity() instanceof Player) && (e.getItem().getItemStack().equals(itemStack))) {
+    if ((e.getEntity() instanceof Player) && (e.getItem().getItemStack().getType().equals(itemStack.getType()))) {
       PotionMeta meta = (PotionMeta) e.getItem().getItemStack().getItemMeta();
       for (PotionEffect effect : meta.getCustomEffects()) {
         e.getEntity().addPotionEffect(effect);
