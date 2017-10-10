@@ -5,7 +5,7 @@ import org.bukkit.World;
 
 import java.util.Random;
 
-public class Region {
+class Region {
 
   private World world;
   private int maxX, maxZ;
@@ -20,7 +20,7 @@ public class Region {
   }
 
   Location getRandomLocation() {
-    Random random = new Random;
+    Random random = new Random();
 
     int x = random.nextInt(maxX - minX) + minX;
     int z = random.nextInt(maxZ - minZ) + minZ;
