@@ -2,8 +2,6 @@ package me.jakemoe.LightningItems;
 
 import org.bukkit.configuration.file.FileConfiguration;
 
-import javax.print.DocFlavor;
-
 class Config {
 
   private Main plugin;
