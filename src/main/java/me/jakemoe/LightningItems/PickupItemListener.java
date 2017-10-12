@@ -19,7 +19,8 @@ public class PickupItemListener implements Listener {
       for (PotionEffect effect : meta.getCustomEffects()) {
         e.getEntity().addPotionEffect(effect);
       }
-      ((Player) e.getEntity()).getInventory().remove(itemStack);
+      e.getItem().remove();
+      e.setCancelled(true);
     }
   }
 

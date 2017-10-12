@@ -14,27 +14,27 @@ class Config {
 
     boolean configChanged = false;
 
-    if (!fileConfig.contains("LightingItems.maxX")) {
+    if (!fileConfig.contains("LightningItems.maxX")) {
       fileConfig.set("LightningItems.maxX", 100);
       configChanged = true;
     }
 
-    if (!fileConfig.contains("LightingItems.maxZ")) {
+    if (!fileConfig.contains("LightningItems.maxZ")) {
       fileConfig.set("LightningItems.maxZ", 100);
       configChanged = true;
     }
 
-    if (!fileConfig.contains("LightingItems.minX")) {
+    if (!fileConfig.contains("LightningItems.minX")) {
       fileConfig.set("LightningItems.minX", 0);
       configChanged = true;
     }
 
-    if (!fileConfig.contains("LightingItems.minZ")) {
+    if (!fileConfig.contains("LightningItems.minZ")) {
       fileConfig.set("LightningItems.minZ", 0);
       configChanged = true;
     }
 
-    if (!fileConfig.contains("LightingItems.world")) {
+    if (!fileConfig.contains("LightningItems.world")) {
       fileConfig.set("LightningItems.world", "world");
       configChanged = true;
     }
